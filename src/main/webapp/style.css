@@ -1,0 +1,342 @@
+/*Colores seteados*/
+:root{
+    --GrisOscuro: #353A40;
+    --Verde: #29883d;
+    --Celeste: #1D9FB7;
+    --Rojo: #e93446;
+    --GrisClaro: #6A747E;
+    --Amarillo: #f5ca30;
+    --Petroleo: #1C465E;
+    --VerdeClaro: #96C93E;  
+    --Negro: #121111;
+    --blanco:white;
+    --gradialpetroleo:linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(28,70,94,1) 56%, rgba(28,70,94,1) 100%);
+}
+/*    HEADER   */
+/*Navegador Horizontal*/
+.navbar-nav{
+    align-items: flex-end;
+
+}
+.navbar-nav  li a{
+    text-align: end;
+    padding-left: 100px;
+    width: 140px;
+    color: var(--GrisClaro);
+    font-size: 13px;
+    
+}
+.navbar-nav li{
+    width: 120px;
+}
+.navbar{
+    background-color: var(--GrisOscuro);
+
+}
+/*Boton hamburgesa*/
+.navbar-menu{
+    display:none;
+} 
+.abrir_menu{
+    display: none;
+}
+/*Cierra hamburgesa*/
+#conf{
+    color: var(--blanco);
+}
+#link:hover{
+    color: var(--blanco);
+}
+#link1{
+    font-size: 13px;
+    color: var(--Verde);
+}
+/*    BODY   */
+/*Carrocel de Imagenes */
+#fondo{
+    display: none;
+    width: 100%;
+    height: auto;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+}
+.wrapper p{
+    margin: 0;
+    padding: 0;
+    padding-top: 10px;
+} 
+/*     MAIN    */
+/*CAJA BOX 1 ,donde estan bill gates, steve y ada*/
+.box{
+    width: auto;
+    height: 500px;
+    justify-content: center;   
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.box-children{
+    width: 250px;
+    height:500px;
+    align-items:center;
+    margin-right: 20px;
+}   
+.box-children:last-child{
+    margin-right: 0px;
+}
+#img_oradores{
+    width: 250px;
+    height: 250px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+} 
+.contenido{
+    border-left: 1px solid var(--GrisClaro);
+    border-right: 1px solid var(--GrisClaro);
+    border-bottom: 1px solid var(--GrisClaro);
+    width: 250px;
+    height: 230px;
+    padding-top:0px;
+    padding-left: 10px;
+}
+.contenido h3{
+    font-size: 1em;
+    font-weight: bold;
+}
+.contenido h4{
+    padding: 2px;
+    display: inline-block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    font-size: 0.6em;
+}
+.amarillo{
+    background-color: var(--Amarillo);
+    color: var(--Negro);
+}
+.celeste{
+    background-color: var(--Celeste);
+    color: var(--blanco);
+}
+.gris{
+    background-color: var(--GrisClaro);
+    color: var(--blanco);
+}
+
+.rojo{
+    padding: 5px;
+    background-color: var(--Rojo    );
+    color: var(--blanco);
+}
+.contenido p{
+    font-size: 11px;
+}
+/*CAJA BOX 2, donde esta la imagen hawai*/
+.box2{
+    width: auto;
+    height: 300px;
+    display: flex;
+   flex-direction: row;
+}
+.box2-children{
+    background-color: var(--GrisOscuro);
+    align-items:center;
+    display: inline-block;
+    width: 50%;
+}
+#img_hawaii{
+    width: 100%;
+    height: 100%;
+    border-radius: 0%;
+    margin-bottom: 0%; 
+} 
+.box2-children h2{
+    color: var(--blanco);
+}
+.box2-children p{
+    color: var(--blanco);
+    font-size: 11px;
+}
+.box2-children a{
+    text-decoration: none;
+    color: var(--blanco);
+    border-bottom: var(--blanco);
+    height: 25px;
+    border-radius: 1px;
+}
+.box2-children a:hover{
+    background-color: white;
+    color: var(--colorNegro);
+}
+/*Caja Box 3, donde esta el formulario */
+.box3{
+    height: 400px;
+    width: auto;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:column;
+}
+.box3-children{
+    padding-top: 20px;
+    height: 100px;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.box3-children h6{
+   
+    font-size: 10px;
+    text-align: center;
+}
+.box3-children h3{
+    text-align: center;
+}
+.box3-children p{
+    padding: 0px;
+    text-align: center;
+    font-size: 12px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 300px;
+    align-items: center;
+}
+.box3 form p{
+    padding: 5px;
+    font-size: 10px;
+}
+.box3-children p span{
+    border-bottom: 2px dotted black;
+}
+.box3 form div input{
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 20px;
+    width: 247px;
+}
+
+.caja3 {
+    width: 100%; /* Cambiar a 100% para ocupar el ancho completo del contenedor padre */
+    height: 60%; /* Cambiar a 'auto' para que la altura se ajuste automáticamente al contenido */
+    text-align: start;
+    max-width: 500px; /* Establecer un ancho máximo si es necesario */
+    box-sizing: border-box;
+     /* Evitar que el usuario redimensione manualmente */
+    
+}
+.box3 form button{
+    width: 500px;
+    border-radius: 4px;
+    border: 4px transparent;
+    text-decoration: none;
+    margin-bottom: 10px;
+    color: var(--blanco);
+    background-color: var(--VerdeClaro);
+}
+/*Seccion para el Footer*/
+.footer{
+    width: auto;
+    height: 100px;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(28,70,94,1) 56%, rgba(28,70,94,1) 100%);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.footer a{
+    display: flex;
+    border: 1px solid;
+    text-decoration: none;
+    border-color: transparent;
+    color: var(--blanco);
+    align-items: center;
+}
+.dato_description {
+    width: 500px;
+    text-align: start;
+    margin-bottom: 10px;
+}
+/* Para que sea responsivo cuando tenga vista de celular*/
+@media screen and (max-width: 768px) {
+    .box-children{
+        margin:0px;
+    }
+    .contenedor_main{
+        height: 1000px ;
+    }
+    .box3 form{
+        display: flex;
+        flex-direction:column;
+        width: 300px;
+        align-items: center;
+    }
+    .box3 form div{
+        display: flex;
+        flex-direction:column;
+        width: 300px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    #caja3{
+        height: 100px;
+        width: 300px;
+        margin-left: 10px;
+    }
+    .box3 form div input{
+        width: 300px;
+    }
+    .box3 form button{
+        width: 300px;
+    }
+    .box3 form p{
+        width: 300px;
+    }
+    /*Menu Hamburgesa*/
+    #conf{
+        display: none;
+    }
+    .container-fluid img{
+        display: none;
+    }
+    #navbar{
+        display: none;
+    } 
+    .navbar-menu{
+        display: flex;
+        background-color: var(--GrisOscuro);
+        justify-content: space-between;
+        padding-left: 7rem;
+        padding-right: 5rem;
+        align-items: end;
+    }
+    .navbar-menu ul li a{
+        text-decoration: none;
+        color: var(--GrisClaro); 
+    }
+    #link1{
+        font-size: 15px;
+    }
+    #link1:hover{
+        font-size: 15px;
+        color: var(--blanco);
+    }
+    .navbar-list{
+        list-style-type: none;
+        right: 0;
+        top: 0;
+        gap:1rem;
+        align-items: end;
+    }
+    .img_codo{
+        width: 150px;
+        height: 100px;
+    }
+    
+  }

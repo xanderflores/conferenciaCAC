@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codo a Codo</title>
+    <link rel="stylesheet" href="./style.comprar.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+</head>
+<body>
+    <header>
+         <!-- Nav Horizontal MENU HAMBURGESA  con logo codo a codo-->
+        <button class="abrir_menu"></button>
+        <nav class="navbar-menu">
+            <ul class="navbar-list"> 
+                <a  id="imagen" href="./index.html"><img class="img_codo" src="./src/img/codoacodo.png"></img></a>
+                <li class="nav-item">
+                    <a  id="link" class="nav-link" href="./index.html#conferencia">La conferencia</a>
+                </li>
+                <li class="nav-item  ">
+                    <a id="link"  class="nav-link" href="./index.html#oradores">Los oradores</a>
+                </li>
+                <li class="nav-item ">
+                    <a id="link"  class="nav-link" href="./index.html#lugar_fecha">El lugar y fecha</a>
+                </li>
+                <li class="nav-item  ">
+                    <a id="link"  class="nav-link" href="./index.html#convierte">Convierte en orador</a>
+                </li>
+                <li class="nav-item  ">
+                    <a id="link1"  class="nav-link" href="./index.html">Volver</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- Nav Horizontal con logo Codo a Codo -->
+        <nav  id="navbar" class="navbar navbar-expand-sm">
+            <div class="container-fluid">
+              <!-- Links -->
+                
+                <img id="imagen" src="./src/img/codoacodo.png" class="img col-sm-1"></img>
+                
+                <a  href="./index.html" id="conf"class="nav-link col-sm-1 ">Conf Bs As</a>
+                <ul class="navbar-nav col-sm-10"> 
+                    <li class="nav-item col-md-2 offset-md-5">
+                        <a  id="link" class="nav-link" href="./index.html#conferencia">La conferencia</a>
+                    </li>
+                    <li class="nav-item col-md-2 ">
+                        <a id="link"  class="nav-link" href="./index.html#oradores">Los oradores</a>
+                    </li>
+                    <li class="nav-item col-md-2">
+                        <a id="link"  class="nav-link" href="./index.html#lugar_fecha">El lugar y fecha</a>
+                    </li>
+                    <li class="nav-item col-md-2 ">
+                        <a id="link"  class="nav-link" href="./index.html#convierte">Convierte en orador</a>
+                    </li>
+                    <li class="nav-item col-md-2 ">
+                        <a id="link1"  class="nav-link" href="./index.html">Volver</a>
+                    </li>
+              </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- Contenedor del main -->
+        <div class="contenedor_main">
+            <!-- caja0 -->
+            <div class="box">
+                <div class="box-childrenn">
+                    <div class="box-estudiante">
+                        <h3>Estudiante</h3>     
+                        <h2>Tiene un descuento</h2>
+                        <h3>80%</h3>
+                        <p>*presentar documentación</p>
+                    </div>
+                    <div class="box-trainee">
+                        <h3>Trainee</h3>     
+                        <h2>Tiene un descuento</h2>
+                        <h3>50%</h3>
+                        <p>*presentar documentación</p>
+                    </div>
+                    <div class="box-junior">
+                        <h3>Junior</h3>     
+                        <h2>Tiene un descuento</h2>
+                        <h3>15%</h3>
+                        <p>*presentar documentación</p>     
+                    </div>
+                </div>   
+            </div>
+            <!-- caja1 -->
+            <div class="box1">
+                <p>VENTA</p>
+                <h2>VALOR DEL TICKET 200</h2>
+            </div>
+            <!-- caja2 -->
+            <div class="box2">
+                <div class="box2-childrenn">
+                    <div class="contenedor-filas">
+                        <div class="fila">
+                            <input class="fila-nombre" placeholder="Nombre"/>
+                            <input class="fila-apellido" placeholder="Apellido"/>
+                        </div>    
+                        <div class="fila1">
+                            <input class="fila-email" placeholder="Correo"/>
+                        </div>
+                        <div class="fila2">
+                            <div class="fila2-1">
+                                <label>Cantidad</label>
+                                <input id="cantidad" type="number" value="0" placeholder="Cantidad"/>
+                            </div >
+                            <div class="fila2-1">
+                                <label>Categoria</label>
+                                <select class="form-select form-select-sm" id="select">
+                                    
+                                </select>        
+                            </div>
+                        </div>
+                        <div class="fila3">
+                            <p class="texto">Total a pagar : </p>
+                            <p class="costo" id="resultado"></p>
+                        </div>
+                        <div class="fila4">
+                            <button type="button" id="resetButton" class="btn text-white custom-button">Borrar</button>
+                            <div></div>
+                            <button  type="button"   id="calcularButton" class="btn text-white custom-button">Resumen</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <a clas="footer_parrafo" href=".7">Preguntas frecuentes</a>
+        <a clas="footer_parrafo" href="#">Contactenos</a>
+        <a clas="footer_parrafo" href="#">Prensa</a>
+        <a clas="footer_parrafo" href="#">Conferencia</a>
+        <a clas="footer_parrafo" href="#">Términos y condiciones</a>
+        <a clas="footer_parrafo" href="#">Privacidad</a>
+        <a clas="footer_parrafo" href="#">estudiantes</a>
+    </footer>
+    <script type="module" src="./comprar.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

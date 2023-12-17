@@ -1,0 +1,337 @@
+/*Colores seteados*/
+:root{
+    --GrisOscuro: #353A40;
+    --Verde: #29883d;
+    --Celeste: #1D9FB7;
+    --Rojo: #e93446;
+    --GrisClaro: #6A747E;
+    --Amarillo: #f5ca30;
+    --Petroleo: #1C465E;
+    --VerdeClaro: #96C93E;  
+    --Negro: #121111;
+    --blanco:white;
+    --azul: rgb(88, 127, 235);
+    --naranja: #df940a;
+    --gradialpetroleo:linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(28,70,94,1) 56%, rgba(28,70,94,1) 100%);
+}
+/*    HEADER   */
+/*Navegador Horizontal*/
+.navbar-nav{
+    align-items: flex-end;
+
+}
+.navbar-nav  li a{
+    text-align: end;
+    padding-left: 100px;
+    width: 140px;
+    color: var(--GrisClaro);
+    font-size: 13px;
+    
+}
+.navbar-nav li{
+    width: 120px;
+}
+.navbar{
+    background-color: var(--GrisOscuro);
+
+}
+/*Boton hamburgesa*/
+.navbar-menu{
+    display:none;
+} 
+.abrir_menu{
+    display: none;
+}
+/*Cierra hamburgesa*/
+#conf{
+    color: var(--blanco);
+}
+#link:hover{
+    color: var(--blanco);
+}
+#link1{
+    font-size: 13px;
+    color: var(--Verde);
+}
+/*Cierre HEADER*/
+/*Estilo para el Main */    
+.contenedor_main{
+    width: auto;
+    height: 470px;
+    display: flex;
+    flex-direction: column;
+}
+/*Stylos para Box */ 
+.box{
+    width: auto;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box-childrenn{
+    width: 60%;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.box-estudiante{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: solid 1px var(--azul);
+    margin-right: 5px;
+    
+}
+.box-trainee{
+    width: 20%;
+    height: 100%;
+    border: solid 1px var(--Petroleo);
+    margin-right: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.box-junior{
+    width: 20%;
+    height: 100%;
+    border: solid 1px var(--naranja);
+    display: flex;
+    flex-direction: column;
+}
+.box h3{
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.box h2{
+    width: 100%;
+    font-size: 14px;
+    text-align: center; 
+}
+.box p{
+    width: 100%;
+    font-size: 10px;
+    text-align: center;
+}
+/*Stylos para Box1 */ 
+.box1{
+    height: 50px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+}
+.box1 p{
+    font-size: 12px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+.box1 h2{
+    font-size: 20px;
+    margin-bottom: 0;
+    text-align: center;
+
+}
+/*Stylos para Box2 */ 
+.box2{
+    width: auto;
+    height: 240px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box2-childrenn{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+.box2-childrenn .contenedor-filas{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+.fila{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 2%;
+}
+.fila .fila-nombre{
+    width: 50%;
+}
+.fila .fila-apellido{
+    margin-left: 10px;
+    width: 50%;
+}
+.fila1{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2%;
+}
+.fila1 .fila-email{
+    width: 100%;
+    
+}
+.fila2{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+   
+}
+.fila2 .fila2-1{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.fila3 {
+    width: 100%;
+    height: 50px;
+    background-color: #cce5ff;
+    display: flex;
+    flex-direction: row;
+    margin-top: 4%;
+    margin-bottom: 2%;
+}
+.fila3 p{
+    
+    width: 22%;
+    text-align: center;
+    margin-bottom: 0;
+    padding-top: 10px;
+}
+.fila4 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+
+}   
+.fila4 div{
+    width: 2%;
+}
+.fila4 .custom-button{
+    background-color:  #97c93e;
+    width: 49%;
+    justify-content: center;
+    border-radius: 2px;
+    align-items: center;
+    text-align: center;
+   display: flex;
+   justify-content: center;
+}
+.fila4 .custom-button:hover {
+    background-color: #218826;
+    
+}
+/*Seccion para el Footer*/
+.footer{
+    width: auto;
+    height: 100px;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(28,70,94,1) 56%, rgba(28,70,94,1) 100%);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.footer a{
+    display: flex;
+    border: 1px solid;
+    text-decoration: none;
+    border-color: transparent;
+    color: var(--blanco);
+    align-items: center;
+}
+.dato_description {
+    width: 500px;
+    text-align: start;
+    margin-bottom: 10px;
+}
+@media screen and (max-width: 768px) {
+    .box-children{
+        margin:0px;
+    }
+    .contenedor_main{
+        height: 1000px ;
+    }
+    .box3 form{
+        display: flex;
+        flex-direction:column;
+        width: 300px;
+        align-items: center;
+    }
+    .box3 form div{
+        display: flex;
+        flex-direction:column;
+        width: 300px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    #caja3{
+        height: 100px;
+        width: 300px;
+        margin-left: 10px;
+    }
+    .box3 form div input{
+        width: 300px;
+    }
+    .box3 form button{
+        width: 300px;
+    }
+    .box3 form p{
+        width: 300px;
+    }
+    /*Menu Hamburgesa*/
+    #conf{
+        display: none;
+    }
+    .container-fluid img{
+        display: none;
+    }
+    #navbar{
+        display: none;
+    } 
+    .navbar-menu{
+        display: flex;
+        background-color: var(--GrisOscuro);
+        justify-content: space-between;
+        padding-left: 7rem;
+        padding-right: 5rem;
+        align-items: end;
+    }
+    .navbar-menu ul li a{
+        text-decoration: none;
+        color: var(--GrisClaro); 
+    }
+    #link1{
+        font-size: 15px;
+    }
+    #link1:hover{
+        font-size: 15px;
+        color: var(--blanco);
+    }
+    .navbar-list{
+        list-style-type: none;
+        right: 0;
+        top: 0;
+        gap:1rem;
+        align-items: end;
+    }
+    .img_codo{
+        width: 150px;
+        height: 100px;
+    }
+    
+  }
