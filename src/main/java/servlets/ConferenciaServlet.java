@@ -1,6 +1,8 @@
 package servlets;
 
 import java.io.IOException;
+import java.util.ArrayList;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -23,6 +25,7 @@ public class ConferenciaServlet extends HttpServlet {
 	//IPersistencia sistemaPersistencia=new MemoryRepositoryImpl();
 	//IPersistencia sistemaPersistencia= new FileRepositoryImpl();
 	IPersistencia sistemaPersistencia= new MysqlRepositoryImpl(); 
+	OradorMapper mapper = new   OradorMapper();
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -35,13 +38,23 @@ public class ConferenciaServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		/*// TODO Auto-generated method stub
 		IPersistencia persistenciaSistema=new MysqlRepositoryImpl();
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 		Orador oradorEncontrado= persistenciaSistema.getOradorById(request.getParameter("id"));
 		// Convert the Orador object to a string representation
 	    String oradorString = oradorEncontrado.toString();
-	    response.getWriter().write(oradorString);
+	    response.getWriter().write(oradorString);*/
+		response.setContentType("application/json");
+
+		ArrayList<Orador> listaDeOradores= sistemaPersistencia.getAll();
+		String	oradoresJson= mapper.toJson(listaDeOradores);
+		
+		response.setContentType("application/json");
+		response.setCharacterEncoding("UTF-8");
+		response.getWriter().write(oradoresJson);
+		System.out.println("Oradores JSON: " + oradoresJson);
+
 	}
 
 	/**
@@ -56,7 +69,7 @@ public class ConferenciaServlet extends HttpServlet {
 		System.out.println("Orador: "+nombre+",  "+apellido+", "+descripcion);
 		//response.getWriter().write("Orador: "+nombre+",  "+apellido+", "+	);
 		
-		Orador orador= new Orador(nombre,apellido,descripcion);
+		Orador orador= new Orador(0, nombre,apellido,descripcion);
 		
 		//persisted
 		
@@ -67,11 +80,13 @@ public class ConferenciaServlet extends HttpServlet {
 				"{\"idOrador\": \"%s\", \"nombre\": \"%s\"}",orador.getIdUsuario(), orador.getNombre()
 				);*/
 		
-		OradorMapper mapper = new OradorMapper();
+		/*OradorMapper mapper = new OradorMapper();
 		
 		String oradorJson = mapper.toJson(orador);
 		
-		response.getWriter().write(oradorJson);	
+		response.getWriter().write(oradorJson);	*/
+		// Redireccionar a ListaOradoresServlet 
+        response.sendRedirect(request.getContextPath() + "/listaOradores.html");
 	}
 
 }

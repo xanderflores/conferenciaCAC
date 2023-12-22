@@ -2,6 +2,7 @@ package infrastructure.persistence.mysql;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
@@ -30,7 +31,7 @@ public class MysqlRepositoryImpl implements IPersistencia {
 			statement.setString(2, newOrador.getApellido());
 			statement.setString(3, newOrador.getDescripcion());
 			statement.execute();
-			System.out.println("USUARIO GUARDADO EN MSQL .....");
+			System.out.println("ORADOR GUARDADO EN MSQL .....");
 			
 			
 		} catch (SQLException e) {
@@ -48,12 +49,36 @@ public class MysqlRepositoryImpl implements IPersistencia {
 	@Override
 	public ArrayList<Orador> getAll() {
 		// TODO Auto-generated method stub
-		return null;
+		ArrayList <Orador> oradores = new ArrayList<>();
+		String query ="SELECT* FROM oradores";
+		
+		try {
+			
+			PreparedStatement statement = conexion.prepareStatement(query);
+			ResultSet result = statement.executeQuery();
+			
+			while(result.next()) {
+				int id =result.getInt("id");
+				String nombre=result.getString("nombre");
+				String apellido=result.getString("apellido");
+				String descripcion=result.getString("descripcion");
+				//create a new object
+				
+				Orador orador = new Orador(id,nombre,apellido,descripcion);
+				oradores.add(orador);
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return oradores;
 	}
 
 	@Override
 	public Orador update(Orador datosParaActualizar) {
 		// TODO Auto-generated method stub
+ 
 		return null;
 	}
 

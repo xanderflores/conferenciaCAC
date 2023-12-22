@@ -1,5 +1,7 @@
 package mappers;
 
+import java.util.ArrayList;
+
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -12,14 +14,14 @@ public class OradorMapper {
 		this.mapper= new ObjectMapper();
 	}
 	
-	public String toJson(Orador orador) {
+	public String toJson(ArrayList<Orador> listaOradores) {
 		
 		try {
-			return mapper.writeValueAsString(orador);
+			return mapper.writeValueAsString(listaOradores);
 		} catch (JsonProcessingException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return null;
+		return "[]";
 	}
 }

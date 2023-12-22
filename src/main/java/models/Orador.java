@@ -4,19 +4,17 @@ import java.util.UUID;
 
 public class Orador {
 
-	private static int contador;
-	
 	private int idUsuario;
 	private UUID idUUID;
 	private String nombre;
 	private String apellido;
 	private String descripcion;
 	
-	public Orador(String nombre, String apellido, String descripcion) {
+	public Orador(int id, String nombre, String apellido, String descripcion) {
 		this.nombre=nombre;
 		this.apellido=apellido;
 		this.descripcion=descripcion;
-		this.idUsuario=contador++;
+		this.idUsuario=id;
 		this.idUUID=UUID.randomUUID();//MODE ALTERNATIVE
 	}
 
@@ -29,7 +27,6 @@ public class Orador {
 	}
 
 	public static void setContador(int contador) {
-		Orador.contador = contador;
 	}
 
 	public String getNombre() {

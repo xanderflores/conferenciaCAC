@@ -233,6 +233,16 @@
    display: flex;
    justify-content: center;
 }
+.calcularButton{
+	background-color:  #97c93e;
+    width: 49%;
+    justify-content: center;
+    border-radius: 2px;
+    align-items: center;
+    text-align: center;
+   display: flex;
+   justify-content: center;
+}
 .fila4 .custom-button:hover {
     background-color: #218826;
     
@@ -258,6 +268,13 @@
     width: 500px;
     text-align: start;
     margin-bottom: 10px;
+}
+
+table{
+	display: flex;
+	width: 80%;
+	justify-content: center;
+	align-items: center;
 }
 @media screen and (max-width: 768px) {
     .box-children{
@@ -335,3 +352,5 @@
     }
     
   }
+  
+  
